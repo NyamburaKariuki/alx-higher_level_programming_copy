@@ -3,7 +3,7 @@ if __name__ == "__main__":
     from sys import argv, exit
     from calculator_1 import add, sub, mul, div
 
-    arguments =len(argv) - 1
+    arguments = len(argv) - 1
 
     if arguments != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -25,4 +25,4 @@ if __name__ == "__main__":
     elif operator == "*":
         print("{} {} {} = {}".format(a, operator, b, mul(a, b)))
     else:
-        print("{} {} {} = {}". format(a, operator, b, div(a, b)))
+        print("{} {} {} = {}".format(a, operator, b, div(a, b)))
