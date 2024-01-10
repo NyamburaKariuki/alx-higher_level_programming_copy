@@ -3,5 +3,6 @@
 
 def print_sorted_dictionary(a_dictionary):
     '''prints a dictionary by ordered keys'''
-    sorted_dict = dict(sorted(a_dictionary.items()))
-    print(sorted_dict, end="\n")
+    sorted_dict = sorted(a_dictionary)
+    for key in sorted_dict:
+        print(f"{key}: {a_dictionary[key]}")
