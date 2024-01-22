@@ -4,12 +4,15 @@ def safe_print_list_integers(my_list=[], x=0):
     other type of value in the list must be skipped (in silence)
     You have to use "{:d}".format() to print an integer'''
 
-    count = 0
-    for item in range(x):
-        try:
-            print("{:d}".format(my_list[item], end=""))
-            count += 1
-        except (ValueError, TypeError):
+    result = 0
+    for i in range(x):
+        if isinstance(my_list[i], int):
+            try:
+                print(my_list[i], end='')
+            except IndexError:
+                break
+        else:
             continue
-    print("")
-    return count
+    result += 1
+    print()
+    return result
