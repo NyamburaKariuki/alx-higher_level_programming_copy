@@ -8,7 +8,7 @@ import math
 class MagicClass:
     """creates a class"""
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """initializes a class
         args: radius(float/int)
         """
