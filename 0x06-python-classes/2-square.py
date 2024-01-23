@@ -3,6 +3,8 @@
 
 
 class Square:
+    """represents the properties of a Square"""
+
     def __init__(mysquare, size=0):
         """initializes a new instance of square
         Args:
