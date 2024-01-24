@@ -9,8 +9,8 @@ class Square:
         """initilizes a new instance of square
         args: size(int)
             : position(tuple)"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """return the area of the square"""
