@@ -52,15 +52,15 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    def __string__(self):
+    def __str__(self):
         """prints the rectangle with the character #"""
-        result = ""
+
         if self.__width == 0 or self.__height == 0:
             return ""
-
+        result = []
         for h in range(self.__height):
             [result.append('#') for w in range(self.__width)]
             if h != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
+                result.append("\n")
+        return ("".join(result))
 
