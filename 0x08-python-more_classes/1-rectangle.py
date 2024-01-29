@@ -9,7 +9,7 @@ class Rectangle:
         """initializes a new instance of a rectangle
         Args:
             width: base of the rectangle(int/float)
-            height: height of the rectangle(int/floar)
+            height: height of the rectangle(int/float)
         """
         self.width = width
         self.height = height
@@ -26,7 +26,7 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >=0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
