@@ -4,6 +4,7 @@
 
 class Rectangle:
     """represents the properties of a Square"""
+
     def __init__(self, width=0, height=0):
         """initializes a new instance of a square
         Args:
