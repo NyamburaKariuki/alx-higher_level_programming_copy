@@ -6,7 +6,7 @@ class Rectangle:
     """represents the properties of a Square"""
 
     number_of_instances = 0
-    print_symbol = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """initializes a new instance of a square
@@ -63,7 +63,7 @@ class Rectangle:
             return ""
         result = []
         for h in range(self.__height):
-            [result.append('#') for w in range(self.__width)]
+            [result.append(str(self.print_symbol)) for w in range(self.__width)]
             if h != self.__height - 1:
                 result.append("\n")
         return ("".join(result))
