@@ -59,5 +59,8 @@ class Rectangle:
             return ""
 
         for h in range(self.__height):
-            result += '#' * self.__width + '\n'
-        return result[:-1]
+            [result.append('#') for w in range(self.__width)]
+            if h != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
+
