@@ -6,6 +6,7 @@ class Rectangle:
     """represents the properties of a Square"""
 
     number_of_instances = 0
+    print_symbol = 0
 
     def __init__(self, width=0, height=0):
         """initializes a new instance of a square
