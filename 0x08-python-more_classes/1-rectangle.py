@@ -3,10 +3,10 @@
 
 
 class Rectangle:
-    """represents the properties of a Square"""
+    """represents the properties of a rectangle"""
 
     def __init__(self, width=0, height=0):
-        """initializes a new instance of a square
+        """initializes a new instance of a rectangle
         Args:
             width: base of the rectangle(int/float)
             height: height of the rectangle(int/floar)
