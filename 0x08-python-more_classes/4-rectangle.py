@@ -63,3 +63,7 @@ class Rectangle:
             if h != self.__height - 1:
                 result.append("\n")
         return ("".join(result))
+
+    def __repr__(self):
+        """returns the string reperesentation of the rectabgle"""
+        return ("Rectangle({:d}, {:d}".format(self.__width, self.__height))
