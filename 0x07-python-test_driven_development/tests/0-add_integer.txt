@@ -2,12 +2,13 @@
 
 #How to use 0-add_integer.py
 
-''add_intege()'' function returns the sum of two arguments, a and b. b is optionl or by default 98
+''add_integer()'' function returns the sum of two arguments, a and b. b is optionl or by default 98
 
     >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(4, 8)
     12
-Adding a negative and non-negative number
+
+    Adding a negative and non-negative number
     >>> add_integer(2, -7)
     -5
 
