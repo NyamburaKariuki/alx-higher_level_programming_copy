@@ -1,0 +1,51 @@
+# The ``5-text_indentation`` module
+============================================
+How to use 5-text_indentation.py
+============================================
+
+text_indentation() prints a text with 2 new lines after each of these
+characters: ., ? and :
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Passing text.
+    >>> text_indentation("Hello. What is your name?")
+    Hello.
+    <BLANKLINE>
+    What is your name?
+  
+Passing an empty string.
+    >>> text_indentation("")
+
+String with spaces at the beginning
+    >>> text_indentation("  HOw are you Mercy?")
+    How are you Mercy?
+
+Text surrounded by spaces
+    >>> text_indentation(" Mercy  ")
+    Mercy
+
+string with one of the characters and space befor the character.
+    >>> text_indentation(" hi ?")
+    hi
+    <BLANKLINE>
+
+non string
+    >>> text_indentation(45)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+None
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+No arguments
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+More than one argument
+    >>> text_indentation("Hola", "Commo Estas") #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but ...
