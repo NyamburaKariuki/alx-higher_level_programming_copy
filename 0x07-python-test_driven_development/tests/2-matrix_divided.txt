@@ -1,4 +1,4 @@
-# 2-matrix_divided.txt
+ -matrix_divided.txt
 
 ==============================
 How to Use 2-matrix_divided.py
@@ -90,6 +90,17 @@ rows should be the same size.
     >>> print(matrix_divided(matrix, 4))
     Traceback (most recent call last):
     TypeError: Each row of the matrix must have the same size
+
+Passing no arguments to matrix_divided().
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Passing more than two arguments to matrix_divided().
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 10, 11) #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    TypeError: matrix_divided() takes 2 positional arguments but ...
 
 ``div`` must be an int or float. 
     >>> matrix = [
