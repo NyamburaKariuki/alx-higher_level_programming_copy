@@ -38,12 +38,12 @@ Non-Numbers
 add_integer() does not take non numbers, if the user tries, it throws an TypeError
 
 Add a string and an integer
-    >>> add_integer("peter", 3)
+    >>> add_integer('p', 3)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
 
-    >>> add_integer(5, "peter")
+    >>> add_integer(5.0, 'p')
     Traceback (most recent call last):
     TypeError: b must be an integer
 
@@ -54,11 +54,6 @@ Add a string and an integer
     >>> add_integer(2, None)
     Traceback (most recent call last):
     TypeError: b must be an integer
-
-Adding two strings
-    >>> add_integer("pete", "alx")
-    Traceback (most recent call last):
-    TypeError: a must be an integer
 
 Passing infinity as an argument
     >>> add_integer(float('inf'))
