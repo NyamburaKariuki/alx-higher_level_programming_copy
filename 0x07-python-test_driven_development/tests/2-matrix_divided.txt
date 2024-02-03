@@ -21,7 +21,7 @@ quotients are rounded to two decimal places.
 
 The original matrix is left unchanged.
     >>> print(matrix)
-    [[1, 2, 3], [4, 5, 6]]
+    [[2, 6, 4], [12, 14, 18]]
 
 Matrix with floating points
 
@@ -62,7 +62,8 @@ Empty list of lists
 
     >>> matrix = [[]]
     >>> print(matrix_divided(matrix, 4))
-    [[]]
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Matrix has one list
     >>> matrix = [2, 4, 3]

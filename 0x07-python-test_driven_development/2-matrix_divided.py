@@ -8,17 +8,15 @@ def matrix_divided(matrix, div):
         div: number to divide with"""
 
     row = None
+    err = "matrix must be a matrix (list of lists) of integers/floats"
     if not matrix or not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix (list of lists)\
-        of integers/floats")
+        raise TypeError(err)
     for x in matrix:
         if not x or not isinstance(x, list):
-            raise TypeError("matrix must be a matrix (list of lists)\
-            of integers/floats")
+            raise TypeError(err)
         for y in x:
             if not isinstance(y, int) and not isinstance(y, float):
-                raise TypeError("matrix must be a matrix (list of lists)\
-                of integers/floats")
+                raise TypeError(err)
         if row is None:
             row = len(x)
         if row != len(x):
