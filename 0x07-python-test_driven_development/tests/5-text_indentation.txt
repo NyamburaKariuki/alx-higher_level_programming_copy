@@ -13,13 +13,15 @@ Passing text.
     Hello.
     <BLANKLINE>
     What is your name?
+    <BLANKLINE>
   
 Passing an empty string.
     >>> text_indentation("")
 
 String with spaces at the beginning
-    >>> text_indentation("  HOw are you Mercy?")
+    >>> text_indentation("  How are you Mercy?")
     How are you Mercy?
+    <BLANKLINE>
 
 Text surrounded by spaces
     >>> text_indentation(" Mercy  ")
@@ -27,7 +29,7 @@ Text surrounded by spaces
 
 string with one of the characters and space befor the character.
     >>> text_indentation(" hi ?")
-    hi
+    hi?
     <BLANKLINE>
 
 non string
@@ -46,6 +48,6 @@ No arguments
     TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 More than one argument
-    >>> text_indentation("Hola", "Commo Estas") #doctest: +ELLIPSIS
+    >>> text_indentation("Hello", "bien motas") #doctest: +ELLIPSIS
     Traceback (most recent call last):
     TypeError: text_indentation() takes 1 positional argument but ...
