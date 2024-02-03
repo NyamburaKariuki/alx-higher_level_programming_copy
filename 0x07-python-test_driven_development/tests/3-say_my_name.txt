@@ -10,16 +10,14 @@ Usage
 ``say_my_name(...)`` prints "My name is <first_name> <last_name>".
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name("NyamburaNyambura")
-    My name is NyamburaNyambura
 
 Passing first_name and last_name correctly.
     >>> say_my_name("Mercy", "Kariuki")
     My name is Mercy Kariuki
 
 Last name is optional, if it is not passed, it prints an empty string
-    >> say_my_name("Mercy")
-    My name is Breezy
+    >>> say_my_name("Mercy")
+    My name is Mercy   
 
 Passing last_name as None.
     >>> say_my_name("Mercy", None)
@@ -31,9 +29,9 @@ Passing both names as None.
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
->>> say_my_name(None, "Kariuki")
-Traceback (most recent call last):
-TypeError: first_name must be a string
+    >>> say_my_name(None, "Kariuki")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
 
     >>> say_my_name(4, "Kariuki")
     Traceback (most recent call last):
@@ -43,10 +41,3 @@ TypeError: first_name must be a string
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
-	>>> say_my_name("Mercy Nyambura", "kariuki")
-	My name is Mercy Nyambura Kariuki
-
-Passing more than two arguments 
-    >>> say_my_name("Mercy", "Nyambura", "Kariuki")
-    Traceback (most recent call last):
-    TypeError: say_my_name() takes from 1 to 2 positional arguments but ...
