@@ -52,6 +52,6 @@ Passing no argument
     TypeError: print_square() missing 1 required positional argument: 'size'
 
 Passing more than two arguments to print_square().
-    >>> print_square(3, 2)
+    >>> print_square(3, 2) #doctest: +ELLIPSIS
     Traceback (most recent call last):
     TypeError: print_square() takes 1 positional argument but ...
