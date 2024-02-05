@@ -16,7 +16,7 @@ Passing first_name and last_name correctly.
     My name is Mercy Kariuki
 
 Last name is optional, if it is not passed, it prints an empty string
-    >>> say_my_name("Mercy")
+    >> say_my_name("Mercy")
     My name is Mercy   
 
 Passing last_name as None.
