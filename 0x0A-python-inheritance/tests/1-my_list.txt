@@ -1,7 +1,11 @@
 # =====================
 # MyList module
 # =====================
+
+
+import module:
 >>> MyList = __import__('1-my_list').MyList
+
 >>> test_list = MyList()
 >>> test_list.append(1)
 >>> test_list.append(3)
