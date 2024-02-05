@@ -9,6 +9,6 @@ class MyInt(int):
         """inverts operator == to !="""
         return super(). __ne__(other)
 
-    def __ne__ne(self, other):
+    def __ne__(self, other):
         """inverts operator != to =="""
         return super().__eq__(other)
