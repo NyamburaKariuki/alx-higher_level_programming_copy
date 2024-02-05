@@ -12,3 +12,58 @@ import module:
 >>> test_list.append(5)
 >>> print(test_list)
 [1, 3, 5]
+
+>>> test_list = MyList([1, 2, 5])
+>>> print(test_list)
+[1, 2, 5]
+
+>>> test_list = MyList(None)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
+
+>>> test_list = MyList([1, 5], [6, 4])
+Traceback (most recent call last):
+TypeError: list expected at most 1 argument, got 2
+
+>>> my_list = [0, 4, 5]
+>>> my_list[0] = 2
+>>> print(my_list)
+[2, 4, 5]
+
+>>> my_list.remove(4)
+>>> print(my_list)
+[2, 5]
+
+>>> test_list = MyList()
+>>> print(test_list.print_sorted)
+<bound method MyList.print_sorted of []>
+
+>>> test_list.print_sorted(1)
+Traceback (most recent call last):
+TypeError: MyList.print_sorted() takes 1 positional argument but 2 were given
+
+>>> test_list.append(1)
+>>> test_list.append(4)
+>>> test_list.append(2)
+>>> print(test_list)
+[1, 4, 2]
+
+>>> test_list.print_sorted()
+[1, 2, 4]
+
+>>> test_list = MyList()
+>>> test_list.append("user")
+>>> test_list.append("name")
+>>> test_list.append("and")
+>>> test_list.append("password")
+>>> test_list.append("betty")
+>>> print(test_list)
+['user', 'name', 'and', 'password', 'betty']
+
+>>> test_list.print_sorted()
+['and', 'betty', 'name', 'password', 'user']
+
+>>> test_list = MyList([7, "Betty", "bayo", 7])
+>>> test_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
