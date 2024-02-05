@@ -1,114 +1,113 @@
-=======================
-How to Use 1-my_list.py
-=======================
+#=======================
+#How to Use 1-my_list.py
+#=======================
 
 This module defines a class ``MyList`` that inherits from ``list``.
 
-''yList`` can be instantiated with no arguments, which will return
+''MyList`` can be instantiated with no arguments, which will return
 an empty list:
 
-    >>> MyList = __import__('1-my_list').MyList
-    >>> test_list = MyList()
-    >>> type(test_list)
-    <class '1-my_list.MyList'>
+>>> MyList = __import__('1-my_list').MyList
+>>> test_list = MyList()
+>>> type(test_list)
+<class '1-my_list.MyList'>
 
-    >>> print(test_list)
-    []
+>>> print(test_list)
+[]
 
 Should have more than one item
 
-    >>> test_list = MyList([1, 2, 5])
-    >>> print(test_list)
-    [1, 2, 5]
+>>> test_list = MyList([1, 2, 5])
+>>> print(test_list)
+[1, 2, 5]
 
-    >>> test_list = MyList(None)
-    Traceback (most recent call last):
-    TypeError: 'NoneType' object is not iterable
-
+>>> test_list = MyList(None)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
 
 should have only one argument
 
-    >>> test_list = MyList([1, 5], [6, 4])
-    Traceback (most recent call last):
-    TypeError: list expected at most 1 argument, got 2
+>>> test_list = MyList([1, 5], [6, 4])
+Traceback (most recent call last):
+TypeError: list expected at most 1 argument, got 2
 
 ``MyList`` is an inherited ``list`` class
 
-    >>> test_list = MyList()
-    >>> test_list.append(0)
-    >>> test_list.append(4)
-    >>> test_list.append(5)
-    >>> print(test_list)
-    [0, 4, 5]
+>>> test_list = MyList()
+>>> test_list.append(0)
+>>> test_list.append(4)
+>>> test_list.append(5)
+>>> print(test_list)
+[0, 4, 5]
 
-    >>> test_list[0] = 2
-    >>> print(test_list)
-    [2, 4, 5]
+>>> test_list[0] = 2
+>>> print(test_list)
+[2, 4, 5]
 
 And removed with the ``remove()`` method.
 
-    >>> test_list.remove(4)
-    >>> print(test_list)
-    [2, 5]
+>>> test_list.remove(4)
+>>> print(test_list)
+[2, 5]
   
 '`MyList`` implements a single method - a public instance method
 ``print_sorted(self)``.
 
-    >>> test_list = MyList()
-    >>> print(test_list.print_sorted)
-    <bound method MyList.print_sorted of []>
+>>> test_list = MyList()
+>>> print(test_list.print_sorted)
+<bound method MyList.print_sorted of []>
 
 The method takes no arguments - a TypeError will be raised if an argument is
 provided.
 
-    >>> test_list.print_sorted(1)
-    Traceback (most recent call last):
-    TypeError: MyList.print_sorted() takes 1 positional argument but 2 were given
+>>> test_list.print_sorted(1)
+Traceback (most recent call last):
+TypeError: MyList.print_sorted() takes 1 positional argument but 2 were given
 
-    >>> test_list.append(1)
-    >>> test_list.append(4)
-    >>> test_list.append(2)
-    >>> test_list.append(3)
-    >>> test_list.append(5)
-    >>> print(test_list)
-    [1, 4, 2, 3, 5]
+>>> test_list.append(1)
+>>> test_list.append(4)
+>>> test_list.append(2)
+>>> test_list.append(3)
+>>> test_list.append(5)
+>>> print(test_list)
+[1, 4, 2, 3, 5]
 
 
-    >>> test_list.print_sorted()
-    [1, 2, 3, 4, 5]
+>>> test_list.print_sorted()
+[1, 2, 3, 4, 5]
 
 The order of the original list is not altered after a call to the method.
 
-    >>> print(test_list)
-    [1, 4, 2, 3, 5]
+>>> print(test_list)
+[1, 4, 2, 3, 5]
 
 Note that lists of strings are sorted lexographically.
 
-    >>> test_list = MyList()
-    >>> test_list.append("user")
-    >>> test_list.append("name")
-    >>> test_list.append("and")
-    >>> test_list.append("password")
-    >>> test_list.append("betty")
-    >>> print(test_list)
-    ['user', 'name', 'and', 'password', 'betty']
+>>> test_list = MyList()
+>>> test_list.append("user")
+>>> test_list.append("name")
+>>> test_list.append("and")
+>>> test_list.append("password")
+>>> test_list.append("betty")
+>>> print(test_list)
+['user', 'name', 'and', 'password', 'betty']
 
-    >>> test_list.print_sorted()
-    ['and', 'betty', 'name', 'password', 'user']
+>>> test_list.print_sorted()
+['and', 'betty', 'name', 'password', 'user']
 
 
-    >>> print(test_list)
-    ['user', 'name', 'and', 'password', 'betty']
+>>> print(test_list)
+['user', 'name', 'and', 'password', 'betty']
 
 Empty list
 
-    >>> test_list = MyList()
-    >>> test_list.print_sorted()
-    []
+>>> test_list = MyList()
+>>> test_list.print_sorted()
+[]
 
 different type of element
 
-    >>> test_list = MyList([7, "Betty", "bayo", 7])
-    >>> test_list.print_sorted()
-    Traceback (most recent call last):
-    TypeError: '<' not supported between instances of 'str' and 'int'
+>>> test_list = MyList([7, "Betty", "bayo", 7])
+>>> test_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
