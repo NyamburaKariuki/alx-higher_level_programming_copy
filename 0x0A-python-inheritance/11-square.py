@@ -14,10 +14,10 @@ class Square(Rectangle):
         self.__size = size
         super().__init__(size, size)
 
+    def __str__(self):
+        """prints the square representation"""
+        return "[Square] {}/{}".format(self.__size, self.__size)
+
     def area(self):
         """calculate the area of the square"""
         return self.__size * self.__size
-
-    def __str__(self):
-        """prints the string rep of the square"""
-        return "[square] {:d}/{:d}".format(self.__size, self.__size)
