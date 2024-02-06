@@ -15,4 +15,4 @@ except (ValueError, FileNotFound):
 for i in argv[1:]:
     j_list.append(item)
 
-save_file(j_list, 'add_item.json')
+save(j_list, 'add_item.json')
