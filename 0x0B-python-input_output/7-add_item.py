@@ -10,7 +10,7 @@ save = __import__('5-save_to_json_file').save_to_json_file
 
 try:
     j_list = load('add_item.json')
-except (ValueError, FileNotFound):
+except (ValueError, FileNotFoundError):
     j_list = []
 for i in argv[1:]:
     j_list.append(item)
