@@ -23,6 +23,7 @@ import module:
 >>> test_list.append(-7)
 >>> test_list.append(-2)
 >>> test_list.print_sorted()
+>>> print(test_list)
 [-7, -5, -2, -1]
 
 >>> test_list = MyList()
