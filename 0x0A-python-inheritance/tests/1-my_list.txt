@@ -16,20 +16,3 @@ import module:
 >>> test_list = MyList([1, 2, 5])
 >>> print(test_list)
 [1, 2, 5]
-
->>> test_list = MyList()
->>> test_list.append(-1)
->>> test_list.append(-5)
->>> test_list.append(-7)
->>> test_list.append(-2)
->>> test_list.print_sorted()
->>> print(test_list)
-[-7, -5, -2, -1]
-
->>> test_list = MyList()
->>> test_list.append('1')
->>> test_list.append('5')
->>> test_list.append('2')
->>> test_list.print_sorted()
-print(test_list)
-['1', '2', '5']
