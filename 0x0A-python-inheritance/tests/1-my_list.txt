@@ -16,3 +16,10 @@ import module:
 >>> test_list = MyList([1, 2, 5])
 >>> print(test_list)
 [1, 2, 5]
+
+>>> my_list = MyList()
+>>> my_list.append(2)
+>>> my_list.printsorted()
+[2]
+>>> print(my_list)
+[2]
