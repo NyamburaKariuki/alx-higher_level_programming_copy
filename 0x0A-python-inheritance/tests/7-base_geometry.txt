@@ -1,7 +1,7 @@
 # The ``7-base_geometry.py`` module
-============================================
-How to use 7-base_geometry.py
-============================================
+# ============================================
+# How to use 7-base_geometry.py
+# ============================================
 
 This module has a function ``integer_validator()`` that validates an integer
 
