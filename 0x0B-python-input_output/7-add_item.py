@@ -13,6 +13,6 @@ try:
 except (ValueError, FileNotFoundError):
     j_list = []
 for i in argv[1:]:
-    j_list.append(item)
+    j_list.append(i)
 
 save(j_list, 'add_item.json')
