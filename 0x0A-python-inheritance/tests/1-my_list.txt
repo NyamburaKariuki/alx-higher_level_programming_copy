@@ -19,7 +19,7 @@ import module:
 
 >>> my_list = MyList()
 >>> my_list.append(2)
->>> my_list.printsorted()
+>>> my_list.print_sorted()
 [2]
 >>> print(my_list)
 [2]
