@@ -8,11 +8,11 @@ def append_after(filename="", search_string="", new_string=""):
     args: filename -file to write
     search_string- string to search for
     new_string- string to write"""
+    lines = ""
     with open(filename, 'r') as f:
-        lines = f.readlines()
-    with open(filename, 'w') as f:
-        for line in lines:
-            f.write(line)
+        for line in f:
+            lines += line
             if search_string in line:
-                f.write(new_string + '\n')
-
+                lines += new_string
+    with open(filename, 'w') as f:
+        f.write(lines + '\n')
