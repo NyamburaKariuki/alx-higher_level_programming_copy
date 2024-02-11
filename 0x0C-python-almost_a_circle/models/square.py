@@ -14,31 +14,48 @@ class Square(Rectangle):
             y: the offset on the y axis(int)
             id: identity of a new square"""
 
-    super().__init__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("Width must be an integer")
         if value <= 0:
-            raise ValueError("width must be > 0""")
+            raise ValueError("width must be > 0")
         self.width = value
         self.height = value
 
     def __str__(self):
         return ("[Square] ({}) {}/{} - {}"
-                .format(self.id, self.__x, self.__y. self.__size))
+                .format(self.id, self.x, self.y, self.size))
 
     def update(self, *args, **kwargs):
         """updates the class with args and kwargs"""
         if args:
             attributes = ['id', 'size', 'x', 'y']
-            for i, arg in enumerate(args):
-                setattr(self, attribute[i], arg)
+            for i in range(len(args)):
+                if attributes[i] == 'size':
+                    setattr(self, 'width', attributes[i])
+                    setattr(self, 'height', attributes[i])
+                else:
+                    setattr(self, attributes[i], args[i])
             else:
                 for key, value in kwargs.items():
-                    setattr(self, key, value)
+                    if key == 'size':
+                        setattr(self, 'width', value)
+                        setattr(self, 'height', value)
+                    else:
+                        setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns dictinary representation of a square"""
+        return {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+         }

@@ -84,6 +84,16 @@ class Rectangle(Base):
             attributes = ['id', 'width', 'height', 'x', 'y']
         for i, arg in enumerate(args):
             setattr(self, attributes[i], arg)
-        else: #if *args is empty use **kwargs
+        else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
