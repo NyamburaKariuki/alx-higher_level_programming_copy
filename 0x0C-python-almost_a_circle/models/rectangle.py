@@ -77,3 +77,13 @@ class Rectangle(Base):
         """returns the string representation of a triangle"""
         return ("[Rectangle] ({}) {:d}/{:d} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args, **kwargs):
+        """pass kwargs to the class"""
+        if args:
+            attributes = ['id', 'width', 'height', 'x', 'y']
+        for i, arg in enumerate(args):
+            setattr(self, attributes[i], arg)
+        else: #if *args is empty use **kwargs
+            for key, value in kwargs.items():
+                setattr(self, key, value)
