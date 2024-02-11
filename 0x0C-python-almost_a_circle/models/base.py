@@ -25,11 +25,25 @@ class Base:
         return json.dumps(list_dictionaries)
 
     @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file"""
+        filename = "{}.json".format(cls.__name__)
+        list_d = []
+        if not list_objs:
+            pass
+        else:
+            for i in range (len(list_objs)):
+                list_d.append(list_objs[i].to_dictionary())
+        list_s = cls.to_json_string(list_d)
+        with open(filename, 'w') as file:
+            file.write(list_s)
+
+    @classmethod
     def create(cls, **dictionary):
         """Return a class instantied from a dictionary of attributes"""
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
-                dummy = cls(1,1)
+                dummy = cls(1, 1)
             else:
                 dummy = cls(1)
             dummy.update(**dictionary)
