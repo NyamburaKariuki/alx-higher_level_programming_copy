@@ -1,3 +1,3 @@
---Script 0
+-- Script 0
 -- lists all databases of your MySQL server.
 SHOW DATABASES
